@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'color_schemes.g2.dart';
+import 'color_schemes.g2.dart'
 
 class Exam10_Material3 extends StatefulWidget {
   const Exam10_Material3({super.key});
