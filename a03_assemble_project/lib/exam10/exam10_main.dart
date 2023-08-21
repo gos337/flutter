@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'color_schemes.g2.dart';
 
-class Exam10_Material3 extends StatelessWidget {
+class Exam10_Material3 extends StatefulWidget {
   const Exam10_Material3({super.key});
+
+  @override
+  State<Exam10_Material3> createState() => _Exam10_Material3State();
+}
+
+class _Exam10_Material3State extends State<Exam10_Material3> {
+  int currentPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,38 +34,61 @@ class Exam10_Material3 extends StatelessWidget {
         centerTitle: true,
         elevation: 2.0,
       ),
-      body: SingleChildScrollView(
-        child: SizedBox(
-          // width: MediaQuery.of(context).size.width,
-          // height: MediaQuery.of(context).size.height,
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text("ButtonTypesExample", style: textStyle),
-                  const ButtonTypesExample(),
-                  const Text("FloatingActionButton", style: textStyle),
-                  const FabExample(),
-                  const Text("IconButtonExampleState", style: textStyle),
-                  const IconButtonExample(),
-                  const IconButtonExample2(),
-                  const IconButtonExample3(),
-                  Text("IconToggleButtons",
-                      style: textStyle.copyWith(fontSize: 15)),
-                  const IconToggleButtons(),
-                  const IconToggleButtons(),
-                  // const SegmentedButtonApp(),
-                  const SizedBox(height: 100)
-                ],
+      body: <Widget>[
+        SingleChildScrollView(
+          child: SizedBox(
+            // width: MediaQuery.of(context).size.width,
+            // height: MediaQuery.of(context).size.height,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("ButtonTypesExample", style: textStyle),
+                    const ButtonTypesExample(),
+                    const Text("FloatingActionButton", style: textStyle),
+                    const FabExample(),
+                    const Text("IconButtonExampleState", style: textStyle),
+                    const IconButtonExample(),
+                    const IconButtonExample2(),
+                    const IconButtonExample3(),
+                    Text("IconToggleButtons",
+                        style: textStyle.copyWith(fontSize: 15)),
+                    const IconToggleButtons(),
+                    const IconToggleButtons(),
+                    const Text("SegmentedButtonApp", style: textStyle),
+                    const SegmentedButtonApp(),
+                    const SizedBox(height: 100)
+                  ],
+                ),
               ),
             ),
           ),
         ),
-      ),
+        SingleChildScrollView(
+          child: Container(
+            color: Colors.green,
+            alignment: Alignment.center,
+            child: const Text('Page 2'),
+          ),
+        ),
+        SingleChildScrollView(
+          child: Container(
+            color: Colors.green,
+            alignment: Alignment.center,
+            child: const Text('Page 3'),
+          ),
+        ),
+      ][currentPageIndex],
       floatingActionButton: const _FAB(),
       bottomNavigationBar: NavigationBar(
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentPageIndex = index;
+          });
+        },
+        selectedIndex: currentPageIndex,
         destinations: const [
           NavigationDestination(icon: Icon(Icons.explore), label: "Explore"),
           NavigationDestination(icon: Icon(Icons.commute), label: "Commute"),
@@ -158,7 +188,7 @@ class FabExample extends StatelessWidget {
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
+        children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -168,11 +198,7 @@ class FabExample extends StatelessWidget {
               //
               // https://m3.material.io/components/floating-action-button/specs#669a1be8-7271-48cb-a74d-dd502d73bda4
               FloatingActionButton.small(
-                onPressed: () {
-                  // Add your onPressed code here!
-                },
-                child: const Icon(Icons.add),
-              ),
+                  onPressed: () {}, child: const Icon(Icons.add)),
             ],
           ),
           const SizedBox(
@@ -180,18 +206,14 @@ class FabExample extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               const Text('Regular'),
               const SizedBox(width: 16),
               // An example of the regular floating action button.
               //
               // https://m3.material.io/components/floating-action-button/specs#71504201-7bd1-423d-8bb7-07e0291743e5
               FloatingActionButton(
-                onPressed: () {
-                  // Add your onPressed code here!
-                },
-                child: const Icon(Icons.add),
-              ),
+                  onPressed: () {}, child: const Icon(Icons.add)),
             ],
           ),
           const SizedBox(
@@ -199,18 +221,14 @@ class FabExample extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               const Text('Large'),
               const SizedBox(width: 16),
               // An example of the large floating action button.
               //
               // https://m3.material.io/components/floating-action-button/specs#9d7d3d6a-bab7-47cb-be32-5596fbd660fe
               FloatingActionButton.large(
-                onPressed: () {
-                  // Add your onPressed code here!
-                },
-                child: const Icon(Icons.add),
-              ),
+                  onPressed: () {}, child: const Icon(Icons.add)),
             ],
           ),
           const SizedBox(
@@ -218,16 +236,14 @@ class FabExample extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               const Text('Extended'),
               const SizedBox(width: 16),
               // An example of the extended floating action button.
               //
               // https://m3.material.io/components/extended-fab/specs#686cb8af-87c9-48e8-a3e1-db9da6f6c69b
               FloatingActionButton.extended(
-                onPressed: () {
-                  // Add your onPressed code here!
-                },
+                onPressed: () {},
                 label: const Text('Add'),
                 icon: const Icon(Icons.add),
               ),
@@ -558,6 +574,7 @@ class _SingleChoiceState extends State<SingleChoice> {
           // selected at one time, so its value is always the first
           // item in the selected set.
           calendarView = newSelection.first;
+          print(calendarView);
         });
       },
     );
