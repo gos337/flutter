@@ -23,11 +23,6 @@ class _Exam10_Material3State extends State<Exam10_Material3> {
   }
 
   Widget _Scaffold(BuildContext context) {
-    const textStyle = TextStyle(
-      fontWeight: FontWeight.w600,
-      fontSize: 20,
-    );
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Material3"),
@@ -35,51 +30,9 @@ class _Exam10_Material3State extends State<Exam10_Material3> {
         elevation: 2.0,
       ),
       body: <Widget>[
-        SingleChildScrollView(
-          child: SizedBox(
-            // width: MediaQuery.of(context).size.width,
-            // height: MediaQuery.of(context).size.height,
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text("ButtonTypesExample", style: textStyle),
-                    const ButtonTypesExample(),
-                    const Text("FloatingActionButton", style: textStyle),
-                    const FabExample(),
-                    const Text("IconButtonExampleState", style: textStyle),
-                    const IconButtonExample(),
-                    const IconButtonExample2(),
-                    const IconButtonExample3(),
-                    Text("IconToggleButtons",
-                        style: textStyle.copyWith(fontSize: 15)),
-                    const IconToggleButtons(),
-                    const IconToggleButtons(),
-                    const Text("SegmentedButtonApp", style: textStyle),
-                    const SegmentedButtonApp(),
-                    const SizedBox(height: 100)
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-        SingleChildScrollView(
-          child: Container(
-            color: Colors.green,
-            alignment: Alignment.center,
-            child: const Text('Page 2'),
-          ),
-        ),
-        SingleChildScrollView(
-          child: Container(
-            color: Colors.green,
-            alignment: Alignment.center,
-            child: const Text('Page 3'),
-          ),
-        ),
+        const NaviDest01(),
+        const NaviDest02(),
+        const NaviDest03(),
       ][currentPageIndex],
       floatingActionButton: const _FAB(),
       bottomNavigationBar: NavigationBar(
@@ -94,6 +47,111 @@ class _Exam10_Material3State extends State<Exam10_Material3> {
           NavigationDestination(icon: Icon(Icons.commute), label: "Commute"),
           NavigationDestination(icon: Icon(Icons.bookmark), label: "Bookmark"),
         ],
+      ),
+    );
+  }
+}
+
+/* ####################################################
+    NaviDest01()
+#################################################### */
+class NaviDest01 extends StatefulWidget {
+  const NaviDest01({super.key});
+
+  @override
+  State<NaviDest01> createState() => _NaviDest01State();
+}
+
+class _NaviDest01State extends State<NaviDest01> {
+  @override
+  Widget build(BuildContext context) {
+    const textStyle = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+    );
+
+    return SingleChildScrollView(
+      child: SizedBox(
+        // width: MediaQuery.of(context).size.width,
+        // height: MediaQuery.of(context).size.height,
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("ButtonTypesExample", style: textStyle),
+                const ButtonTypesExample(),
+                const Text("FloatingActionButton", style: textStyle),
+                const FabExample(),
+                const Text("IconButtonExampleState", style: textStyle),
+                const IconButtonExample(),
+                const IconButtonExample2(),
+                const IconButtonExample3(),
+                Text("IconToggleButtons",
+                    style: textStyle.copyWith(fontSize: 15)),
+                const IconToggleButtons(),
+                const IconToggleButtons(),
+                const Text("SegmentedButtonApp", style: textStyle),
+                const SegmentedButtonApp(),
+                const SizedBox(height: 100)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/* ####################################################
+    NaviDest02()
+#################################################### */
+class NaviDest02 extends StatefulWidget {
+  const NaviDest02({super.key});
+
+  @override
+  State<NaviDest02> createState() => _NaviDest02State();
+}
+
+class _NaviDest02State extends State<NaviDest02> {
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Container(
+        child: const Column(
+          children: [
+            CardExample1(),
+            CardExample2(),
+            CardExamplesApp3(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/* ####################################################
+    NaviDest03()
+#################################################### */
+class NaviDest03 extends StatefulWidget {
+  const NaviDest03({super.key});
+
+  @override
+  State<NaviDest03> createState() => _NaviDest03State();
+}
+
+class _NaviDest03State extends State<NaviDest03> {
+  @override
+  Widget build(BuildContext context) {
+    return const SingleChildScrollView(
+      child: Center(
+        child: Column(
+          children: [
+            ObscuredTextFieldSample(),
+            TextFieldExample(),
+          ],
+        ),
       ),
     );
   }
@@ -613,6 +671,236 @@ class _MultipleChoiceState extends State<MultipleChoice> {
         });
       },
       multiSelectionEnabled: true,
+    );
+  }
+}
+
+class CardExample1 extends StatelessWidget {
+  const CardExample1({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Card(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            const ListTile(
+              leading: Icon(Icons.album),
+              title: Text('The Enchanted Nightingale'),
+              subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                TextButton(
+                  child: const Text('BUY TICKETS'),
+                  onPressed: () {/* ... */},
+                ),
+                const SizedBox(width: 8),
+                TextButton(
+                  child: const Text('LISTEN'),
+                  onPressed: () {/* ... */},
+                ),
+                const SizedBox(width: 8),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class CardExample2 extends StatelessWidget {
+  const CardExample2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Card(
+        // clipBehavior is necessary because, without it, the InkWell's animation
+        // will extend beyond the rounded edges of the [Card] (see https://github.com/flutter/flutter/issues/109776)
+        // This comes with a small performance cost, and you should not set [clipBehavior]
+        // unless you need it.
+        clipBehavior: Clip.hardEdge,
+        child: InkWell(
+          splashColor: Colors.blue.withAlpha(30),
+          onTap: () {
+            debugPrint('Card tapped.');
+          },
+          child: const SizedBox(
+            width: 300,
+            height: 100,
+            child: Text('A card that can be tapped'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CardExamplesApp3 extends StatelessWidget {
+  const CardExamplesApp3({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Column(
+      children: <Widget>[
+        // Spacer(),
+        ElevatedCardExample(),
+        FilledCardExample(),
+        OutlinedCardExample(),
+      ],
+    );
+  }
+}
+
+/// An example of the elevated card type.
+///
+/// The default settings for [Card] will provide an elevated
+/// card matching the spec:
+///
+/// https://m3.material.io/components/cards/specs#a012d40d-7a5c-4b07-8740-491dec79d58b
+class ElevatedCardExample extends StatelessWidget {
+  const ElevatedCardExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Card(
+        child: SizedBox(
+          width: 300,
+          height: 100,
+          child: Center(child: Text('Elevated Card')),
+        ),
+      ),
+    );
+  }
+}
+
+/// An example of the filled card type.
+///
+/// To make a [Card] match the filled type, the default elevation and color
+/// need to be changed to the values from the spec:
+///
+/// https://m3.material.io/components/cards/specs#0f55bf62-edf2-4619-b00d-b9ed462f2c5a
+class FilledCardExample extends StatelessWidget {
+  const FilledCardExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Card(
+        elevation: 0,
+        color: Theme.of(context).colorScheme.surfaceVariant,
+        child: const SizedBox(
+          width: 300,
+          height: 100,
+          child: Center(child: Text('Filled Card')),
+        ),
+      ),
+    );
+  }
+}
+
+/// An example of the outlined card type.
+///
+/// To make a [Card] match the outlined type, the default elevation and shape
+/// need to be changed to the values from the spec:
+///
+/// https://m3.material.io/components/cards/specs#0f55bf62-edf2-4619-b00d-b9ed462f2c5a
+class OutlinedCardExample extends StatelessWidget {
+  const OutlinedCardExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Card(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(
+            color: Theme.of(context).colorScheme.outline,
+          ),
+          borderRadius: const BorderRadius.all(Radius.circular(12)),
+        ),
+        child: const SizedBox(
+          width: 300,
+          height: 100,
+          child: Center(child: Text('Outlined Card')),
+        ),
+      ),
+    );
+  }
+}
+
+class ObscuredTextFieldSample extends StatelessWidget {
+  const ObscuredTextFieldSample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+      width: 250,
+      child: TextField(
+        obscureText: true,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          labelText: 'Password',
+        ),
+      ),
+    );
+  }
+}
+
+class TextFieldExample extends StatefulWidget {
+  const TextFieldExample({super.key});
+
+  @override
+  State<TextFieldExample> createState() => _TextFieldExampleState();
+}
+
+class _TextFieldExampleState extends State<TextFieldExample> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 300,
+      child: TextField(
+        controller: _controller,
+        onSubmitted: (String value) async {
+          await showDialog<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: const Text('Thanks!'),
+                content: Text(
+                    'You typed "$value", which has length ${value.characters.length}.'),
+                actions: <Widget>[
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text('OK'),
+                  ),
+                ],
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }
