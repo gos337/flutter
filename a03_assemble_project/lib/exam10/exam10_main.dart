@@ -1,6 +1,7 @@
+import 'package:a03_assemble_project/exam10/listTile_exam.dart';
 import 'package:flutter/material.dart';
 
-import 'color_schemes.g2.dart';
+import 'color_schemes.g.dart';
 
 class Exam10_Material3 extends StatefulWidget {
   const Exam10_Material3({super.key});
@@ -117,15 +118,34 @@ class NaviDest02 extends StatefulWidget {
 class _NaviDest02State extends State<NaviDest02> {
   @override
   Widget build(BuildContext context) {
+    const textStyle = TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+    );
+
     return SingleChildScrollView(
-      child: Container(
-        child: const Column(
-          children: [
-            CardExample1(),
-            CardExample2(),
-            CardExamplesApp3(),
-          ],
-        ),
+      child: Column(
+        children: [
+          const CardExample1(),
+          const CardExample2(),
+          const CardExamplesApp3(),
+          const Text("ListTileExample", style: textStyle),
+          const ListTileExample(),
+          const Text("ListTileExample2", style: textStyle),
+          const ListTileExample2(),
+          const Text("ListTileExample3", style: textStyle),
+          const ListTileExample3(),
+          const Text("ListTileExample4", style: textStyle),
+          const ListTileExample4(),
+          const Text("ListTileExample5", style: textStyle),
+          Text("ListTile.titleAlignment Sample",
+              style: textStyle.copyWith(fontSize: 15)),
+          const ListTileExample5(),
+          const Text("CustomListItemExample1", style: textStyle),
+          const CustomListItemExample1(),
+          const Text("CustomListItemExample2", style: textStyle),
+          const CustomListItemExample2(),
+        ],
       ),
     );
   }
