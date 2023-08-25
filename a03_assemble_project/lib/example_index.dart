@@ -1,5 +1,6 @@
 import 'package:a03_assemble_project/exam10/exam10_main.dart';
 import 'package:a03_assemble_project/exam11/exam11_main.dart';
+import 'package:a03_assemble_project/exam12/exam12_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -66,8 +67,13 @@ class Example {
     },
     {
       "appName": "exam11 FutureBuilder & StreamBuilder",
-      "leadingIcon": Icons.navigation_rounded,
+      "leadingIcon": Icons.stream,
       "link": const Exam11(),
+    },
+    {
+      "appName": "exam12 Video Call",
+      "leadingIcon": Icons.videocam,
+      "link": const Exam12(),
     },
   ];
 }
