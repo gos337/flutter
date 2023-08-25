@@ -1,7 +1,7 @@
 import 'package:a03_assemble_project/exam10/listTile_exam.dart';
 import 'package:flutter/material.dart';
 
-import 'color_schemes.g.dart';
+import 'color_schemes.g5.dart';
 
 class Exam10_Material3 extends StatefulWidget {
   const Exam10_Material3({super.key});

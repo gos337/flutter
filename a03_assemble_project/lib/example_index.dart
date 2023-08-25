@@ -1,4 +1,5 @@
 import 'package:a03_assemble_project/exam10/exam10_main.dart';
+import 'package:a03_assemble_project/exam11/exam11_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -62,6 +63,11 @@ class Example {
       "appName": "exam10 Material3",
       "leadingIcon": Icons.navigation_rounded,
       "link": const Exam10_Material3(),
+    },
+    {
+      "appName": "exam11 FutureBuilder & StreamBuilder",
+      "leadingIcon": Icons.navigation_rounded,
+      "link": const Exam11(),
     },
   ];
 }
