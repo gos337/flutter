@@ -8,14 +8,14 @@ class Exam12 extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.blue[100],
-        body: SafeArea(
+        body: const SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0),
             child: Column(
               children: [
-                const Expanded(child: _Logo()),
-                Expanded(child: Container()),
-                const Expanded(child: _Button()),
+                Expanded(child: _Logo()),
+                Expanded(child: _Image()),
+                Expanded(child: _Button()),
               ],
             ),
           ),
@@ -64,6 +64,17 @@ class _Logo extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class _Image extends StatelessWidget {
+  const _Image();
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(
+      "lib/exam07/image/iU_01.jpg",
     );
   }
 }
