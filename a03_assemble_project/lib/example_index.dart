@@ -4,6 +4,7 @@ import 'package:a03_assemble_project/exam12/exam12_main.dart';
 import 'package:a03_assemble_project/exam13/exam13_main.dart';
 import 'package:a03_assemble_project/exam14/exam14.main.dart';
 import 'package:a03_assemble_project/exam15/exam15_main.dart';
+import 'package:a03_assemble_project/exam16/exam16_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -92,6 +93,11 @@ class Example {
       "appName": "exam15 AnimatedContainer",
       "leadingIcon": Icons.animation,
       "link": const Exam15(),
+    },
+    {
+      "appName": "exam16 Notification",
+      "leadingIcon": Icons.animation,
+      "link": const Exam16(),
     },
   ];
 }
