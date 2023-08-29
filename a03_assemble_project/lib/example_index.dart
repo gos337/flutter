@@ -1,6 +1,7 @@
 import 'package:a03_assemble_project/exam10/exam10_main.dart';
 import 'package:a03_assemble_project/exam11/exam11_main.dart';
 import 'package:a03_assemble_project/exam12/exam12_main.dart';
+import 'package:a03_assemble_project/exam13/exam13_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -74,6 +75,11 @@ class Example {
       "appName": "exam12 Video Call",
       "leadingIcon": Icons.videocam,
       "link": const Exam12(),
+    },
+    {
+      "appName": "exam13 GridView",
+      "leadingIcon": Icons.grid_3x3,
+      "link": const Exam13(),
     },
   ];
 }
