@@ -124,56 +124,6 @@ class MainpageCache {
     }
 
     return items;
-
-    // print("###### mainData #########");
-    // print(mainData);
-    // print(mainData.result.mainLayouts.length); // 15
-    // print(mainData.result.mainLayouts[1].rowNum);
-    // print(mainData.result.mainLayouts[1].items.length);
-    // print(mainData.result.mainLayouts[1].items[0].boardItem!.imageUrl!);
-    // print(mainData.result.mainLayouts[1].items[0].type);
-
-    // print(data);
-    // Map<String, String> test = {"ddd": "aa"};
-    // print(test);
-    // data.add(test);
-    // print(data);
-    // data.add(test);
-    // print(data);
-    // data.add(test);
-    // print(data);
-
-    // String? designType;
-    // String? imageURL, title, desc;
-    // for (int i = 0; i < mainData.result.mainLayouts.length; i++) {
-    //   if (i == 1) {
-    //     designType = mainData.result.mainLayouts[i].designType;
-    //     for (int j = 0; j < mainData.result.mainLayouts[i].items.length; j++) {
-    //       if (mainData.result.mainLayouts[i].items[j].type == ItemType.B) {
-    //         items = {
-    //           "imageURL":
-    //               mainData.result.mainLayouts[i].items[j].boardItem?.imageUrl,
-    //           "title": mainData.result.mainLayouts[i].items[j].boardItem?.title,
-    //           "desc": mainData.result.mainLayouts[i].items[j].boardItem?.desc,
-    //         };
-    //         // imageURL =
-    //         //     mainData.result.mainLayouts[i].items[j].boardItem?.imageUrl;
-    //         // title = mainData.result.mainLayouts[i].items[j].boardItem?.title;
-    //         // desc = mainData.result.mainLayouts[i].items[j].boardItem?.desc;
-    //       } else if (mainData.result.mainLayouts[i].items[j].type ==
-    //           ItemType.C) {
-    //         print("C");
-    //       }
-    //     }
-    //   }
-    // }
-
-    // print(designType);
-    // print(imageURL);
-    // print(title);
-    // print(desc);
-
-    // return items;
   }
 }
 

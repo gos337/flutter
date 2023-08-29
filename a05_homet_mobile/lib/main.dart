@@ -1,3 +1,4 @@
+import 'package:a05_homet_mobile/refactory/initApp.dart';
 import 'package:flutter/material.dart';
 
 import 'MainPage.dart';
@@ -9,7 +10,7 @@ import 'dataModel/MainpageCache.dart';
 late MainpageCache mainpageData;
 
 void main() {
-  runApp(const HometApp());
+  runApp(const initApp());
 }
 
 class HometApp extends StatelessWidget {

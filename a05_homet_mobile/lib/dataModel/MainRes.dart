@@ -26,6 +26,116 @@ class MainRes {
         "desc": desc,
         "result": result.toJson(),
       };
+
+  /* #############################################
+      Function Part
+  ############################################# */
+
+  int GetFavThemeItemCount(int index) {
+    print(result.mainLayouts[index].items.length);
+    return result.mainLayouts[index].items.length;
+  }
+
+  String GetFavThemeName(int index) {
+    print(result.mainLayouts[index].rowTitle);
+    return result.mainLayouts[index].rowTitle;
+  }
+
+  Map GetFavThemeItem(int index) {
+    // List<Map<String, String>> data = List.empty(growable: true);
+    Map items = <String, String?>{};
+    int themeIndex = 2;
+
+    if (result.mainLayouts[themeIndex].items[index].type == ItemType.C) {
+      items = {
+        "imageURL":
+            result.mainLayouts[themeIndex].items[index].content?.thumbUrl,
+        "title": result.mainLayouts[themeIndex].items[index].content?.title,
+      };
+    }
+
+    return items;
+  }
+
+  Map GetTrainerThemeItem(int index) {
+    // List<Map<String, String>> data = List.empty(growable: true);
+    Map items = <String, String?>{};
+    int themeIndex = 3;
+
+    if (result.mainLayouts[themeIndex].items[index].type == ItemType.C) {
+      items = {
+        "key":
+            result.mainLayouts[themeIndex].items[index].content?.key.toString(),
+        "imageURL":
+            result.mainLayouts[themeIndex].items[index].content?.thumbUrl,
+        "title": result.mainLayouts[themeIndex].items[index].content?.title,
+      };
+    }
+
+    return items;
+  }
+
+  Map GetBannerThemeItem(int index) {
+    // List<Map<String, String>> data = List.empty(growable: true);
+    Map items = <String, String?>{};
+    int themeIndex = 5;
+
+    if (result.mainLayouts[themeIndex].items[index].type == ItemType.C) {
+      items = {
+        "imageURL":
+            result.mainLayouts[themeIndex].items[index].content?.thumbUrl,
+        "title": result.mainLayouts[themeIndex].items[index].content?.title,
+      };
+    }
+
+    return items;
+  }
+
+  Map GetPartTrainingThemeItem(int index) {
+    // List<Map<String, String>> data = List.empty(growable: true);
+    Map items = <String, String?>{};
+    int themeIndex = 7;
+
+    if (result.mainLayouts[themeIndex].items[index].type == ItemType.C) {
+      items = {
+        "imageURL":
+            result.mainLayouts[themeIndex].items[index].content?.thumbUrl,
+        "title": result.mainLayouts[themeIndex].items[index].content?.title,
+      };
+    }
+
+    return items;
+  }
+
+  int GetMainBannerItemCount() {
+    // print(mainData.result.mainLayouts[1].items.length);
+    return result.mainLayouts[1].items.length;
+  }
+
+  Map GetMainBannerItem(int index) {
+    // List<Map<String, String>> data = List.empty(growable: true);
+    Map items = <String, String?>{};
+    int themeIndex = 1;
+
+    if (result.mainLayouts[themeIndex].items[index].type == ItemType.B) {
+      items = {
+        "imageURL":
+            result.mainLayouts[themeIndex].items[index].boardItem?.imageUrl,
+        "title": result.mainLayouts[themeIndex].items[index].boardItem?.title,
+        "desc": result.mainLayouts[themeIndex].items[index].boardItem?.desc,
+      };
+      // print(items);
+    } else if (result.mainLayouts[themeIndex].items[index].type == ItemType.C) {
+      items = {
+        "imageURL":
+            result.mainLayouts[themeIndex].items[index].content?.thumbUrl,
+        "title": result.mainLayouts[themeIndex].items[index].content?.title,
+        "desc": result.mainLayouts[themeIndex].items[index].content?.desc,
+      };
+    }
+
+    return items;
+  }
 }
 
 class Result {
