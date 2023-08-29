@@ -2,6 +2,8 @@ import 'package:a03_assemble_project/exam10/exam10_main.dart';
 import 'package:a03_assemble_project/exam11/exam11_main.dart';
 import 'package:a03_assemble_project/exam12/exam12_main.dart';
 import 'package:a03_assemble_project/exam13/exam13_main.dart';
+import 'package:a03_assemble_project/exam14/exam14.main.dart';
+import 'package:a03_assemble_project/exam15/exam15_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -80,6 +82,16 @@ class Example {
       "appName": "exam13 GridView",
       "leadingIcon": Icons.grid_3x3,
       "link": const Exam13(),
+    },
+    {
+      "appName": "exam14 PhotoView",
+      "leadingIcon": Icons.photo_camera_back,
+      "link": const Exam14(),
+    },
+    {
+      "appName": "exam15 AnimatedContainer",
+      "leadingIcon": Icons.animation,
+      "link": const Exam15(),
     },
   ];
 }
