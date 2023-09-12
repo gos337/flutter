@@ -80,12 +80,13 @@ class ApiService {
     final url = Uri.parse('$baseUrl/$apiMain');
     final response = await http.get(url, headers: header);
 
-    // print("print(response.statusCode);");
-    // print(response.statusCode);
+    print("print(response.statusCode);");
+    print(response.statusCode);
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);
+      print(jsonData);
       MainRes mainData = MainRes.fromJson(jsonData);
-      // print("MainRes mainData = MainRes.fromJson(jsonData);");
+      print("MainRes mainData = MainRes.fromJson(jsonData);");
       return mainData;
     }
 

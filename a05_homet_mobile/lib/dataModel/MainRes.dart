@@ -139,7 +139,7 @@ class MainRes {
 }
 
 class Result {
-  List<Notice> notices;
+  List<Notice>? notices;
   dynamic noticeKeys;
   List<MainLayout> mainLayouts;
   dynamic userFolders;
@@ -156,8 +156,9 @@ class Result {
   });
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
-        notices:
-            List<Notice>.from(json["notices"].map((x) => Notice.fromJson(x))),
+        notices: json["notices"] == null
+            ? null
+            : List<Notice>.from(json["notices"].map((x) => Notice.fromJson(x))),
         noticeKeys: json["notice_keys"],
         mainLayouts: List<MainLayout>.from(
             json["main_layouts"].map((x) => MainLayout.fromJson(x))),
@@ -167,7 +168,9 @@ class Result {
       );
 
   Map<String, dynamic> toJson() => {
-        "notices": List<dynamic>.from(notices.map((x) => x.toJson())),
+        "notices": notices == null
+            ? null
+            : List<dynamic>.from(notices!.map((x) => x.toJson())),
         "notice_keys": noticeKeys,
         "main_layouts": List<dynamic>.from(mainLayouts.map((x) => x.toJson())),
         "user_folders": userFolders,

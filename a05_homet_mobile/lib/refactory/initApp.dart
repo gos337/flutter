@@ -6,10 +6,6 @@ import 'package:flutter/material.dart';
 class initApp extends StatelessWidget {
   const initApp({super.key});
 
-  Future init() async {
-    const SplashPage();
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
