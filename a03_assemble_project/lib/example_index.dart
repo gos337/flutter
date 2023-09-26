@@ -5,6 +5,8 @@ import 'package:a03_assemble_project/exam13/exam13_main.dart';
 import 'package:a03_assemble_project/exam14/exam14.main.dart';
 import 'package:a03_assemble_project/exam15/exam15_main.dart';
 import 'package:a03_assemble_project/exam16/exam16_main.dart';
+import 'package:a03_assemble_project/exam17/exam17_main.dart';
+import 'package:a03_assemble_project/exam18/exam18_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -98,6 +100,16 @@ class Example {
       "appName": "exam16 Notification",
       "leadingIcon": Icons.animation,
       "link": const Exam16(),
+    },
+    {
+      "appName": "exam17 Kakao",
+      "leadingIcon": Icons.task_alt,
+      "link": const exam17(),
+    },
+    {
+      "appName": "exam18 BMI",
+      "leadingIcon": Icons.man,
+      "link": const Exam18(),
     },
   ];
 }

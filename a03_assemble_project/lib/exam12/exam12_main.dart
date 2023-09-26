@@ -1,3 +1,4 @@
+import 'package:a03_assemble_project/exam12/cam_screen.dart';
 import 'package:flutter/material.dart';
 
 class Exam12 extends StatelessWidget {
@@ -89,7 +90,15 @@ class _Button extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            print("입장하기");
+
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const CamScreen(),
+              ),
+            );
+          },
           child: const Text("입장하기"),
         ),
       ],

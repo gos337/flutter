@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'example_index.dart';
 import 'make_example_list.dart';
 
 void main() {
+  KakaoSdk.init(nativeAppKey: '4b5d692674a29e58379d6f11cdc54102');
   runApp(const MyApp());
 }
 

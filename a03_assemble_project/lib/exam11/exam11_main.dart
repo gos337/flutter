@@ -95,6 +95,7 @@ class _Exam11State extends State<Exam11> {
   }
 
   Future<int> getNumber() async {
+    print("getNumber()");
     await Future.delayed(const Duration(seconds: 1));
 
     final random = Random();
@@ -103,6 +104,7 @@ class _Exam11State extends State<Exam11> {
   }
 
   Future<int> getError() async {
+    print("getError()");
     await Future.delayed(const Duration(seconds: 1));
 
     final random = Random();
