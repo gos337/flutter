@@ -137,9 +137,9 @@ class MyCard extends StatelessWidget {
               const _CheckBox(skillName: "Fire Flames"),
               const _CheckBox(skillName: "Ice Spier"),
               const SizedBox(height: 20),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   CircleAvatar(
                     backgroundImage: AssetImage("lib/exam05/assets/ss02.png"),
                     radius: 40,

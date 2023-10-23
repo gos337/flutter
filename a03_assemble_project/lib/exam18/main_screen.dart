@@ -1,5 +1,6 @@
 import 'package:a03_assemble_project/exam18/result_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Exam18_MainScreen extends StatefulWidget {
   const Exam18_MainScreen({super.key});
@@ -14,10 +15,36 @@ class _Exam18_MainScreenState extends State<Exam18_MainScreen> {
   final _weightController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+
+    load();
+  }
+
+  @override
   void dispose() {
     _heightController.dispose();
     _weightController.dispose();
     super.dispose();
+  }
+
+  Future save() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    prefs.setDouble('height', double.parse(_heightController.text));
+    prefs.setDouble('weight', double.parse(_weightController.text));
+  }
+
+  Future load() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    final double? height = prefs.getDouble('height');
+    final double? weight = prefs.getDouble('weight');
+
+    if (height != null && weight != null) {
+      _heightController.text = '$height';
+      _weightController.text = '$weight';
+    }
   }
 
   @override
@@ -66,6 +93,8 @@ class _Exam18_MainScreenState extends State<Exam18_MainScreen> {
                   if (_formKey.currentState?.validate() == false) {
                     return;
                   }
+
+                  save();
 
                   Navigator.push(
                     context,

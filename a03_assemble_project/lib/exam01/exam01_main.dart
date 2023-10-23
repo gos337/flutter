@@ -67,9 +67,9 @@ class exam01 extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Button(
                     text: "Transfer",
                     bgColor: Colors.amber,

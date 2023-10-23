@@ -7,6 +7,9 @@ import 'package:a03_assemble_project/exam15/exam15_main.dart';
 import 'package:a03_assemble_project/exam16/exam16_main.dart';
 import 'package:a03_assemble_project/exam17/exam17_main.dart';
 import 'package:a03_assemble_project/exam18/exam18_main.dart';
+import 'package:a03_assemble_project/exam19/exam19_main.dart';
+import 'package:a03_assemble_project/exam20/exam20_main.dart';
+import 'package:a03_assemble_project/exam21/exam21_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -110,6 +113,21 @@ class Example {
       "appName": "exam18 BMI",
       "leadingIcon": Icons.man,
       "link": const Exam18(),
+    },
+    {
+      "appName": "exam19 StopWatch",
+      "leadingIcon": Icons.man,
+      "link": const Exam19(),
+    },
+    {
+      "appName": "exam20 WebView",
+      "leadingIcon": Icons.man,
+      "link": const Exam20(),
+    },
+    {
+      "appName": "exam21 GestureDetector",
+      "leadingIcon": Icons.man,
+      "link": const Exam21(),
     },
   ];
 }
