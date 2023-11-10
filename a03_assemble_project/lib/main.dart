@@ -1,9 +1,16 @@
+import 'package:a03_assemble_project/exam22/todo.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'example_index.dart';
 import 'make_example_list.dart';
 
-void main() {
+late final Box<Todo> todos;
+
+void main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(TodoAdapter());
+  todos = await Hive.openBox<Todo>("todolisg.db");
   KakaoSdk.init(nativeAppKey: '4b5d692674a29e58379d6f11cdc54102');
   runApp(const MyApp());
 }

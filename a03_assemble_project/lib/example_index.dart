@@ -10,6 +10,9 @@ import 'package:a03_assemble_project/exam18/exam18_main.dart';
 import 'package:a03_assemble_project/exam19/exam19_main.dart';
 import 'package:a03_assemble_project/exam20/exam20_main.dart';
 import 'package:a03_assemble_project/exam21/exam21_main.dart';
+import 'package:a03_assemble_project/exam22/exam22_main.dart';
+import 'package:a03_assemble_project/exam23/exam23_main.dart';
+import 'package:a03_assemble_project/exam24/exam24_main.dart';
 import 'package:flutter/material.dart';
 
 import 'exam01/exam01_main.dart';
@@ -128,6 +131,21 @@ class Example {
       "appName": "exam21 GestureDetector",
       "leadingIcon": Icons.man,
       "link": const Exam21(),
+    },
+    {
+      "appName": "exam22 To-Do List",
+      "leadingIcon": Icons.toc_rounded,
+      "link": const Exam22(),
+    },
+    {
+      "appName": "exam23 Provider",
+      "leadingIcon": Icons.follow_the_signs,
+      "link": const Exam23(),
+    },
+    {
+      "appName": "exam24 Design Pattern",
+      "leadingIcon": Icons.design_services_outlined,
+      "link": const Exam24(),
     },
   ];
 }

@@ -45,10 +45,16 @@ dependencies:
   kakao_flutter_sdk: ^1.4.0 # Kakao SDK 전체 추가 (로그인, 메시지, 소셜, 스토리, 카카오톡 공유, 네비, 소셜 )  
   webview_flutter: ^3.0.4
   image_picker: ^1.0.0
+  hive: ^2.2.3
+  hive_flutter : ^1.1.0
+  intl: ^0.18.1
+  provider: ^6.0.5
+  mvc_pattern: ^8.12.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +66,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  hive_generator : ^2.0.0
+  build_runner : ^2.3.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -28,15 +28,12 @@ class ResultScreen extends StatelessWidget {
   }
 
   Widget _buildIcon(double bmi) {
-    Icon icon = const Icon(Icons.sentiment_dissatisfied,
-        size: 100, color: Colors.green);
+    Icon icon = const Icon(Icons.sentiment_dissatisfied, size: 100, color: Colors.green);
 
     if (bmi >= 23) {
-      icon = const Icon(Icons.sentiment_very_dissatisfied_outlined,
-          size: 100, color: Colors.green);
+      icon = const Icon(Icons.sentiment_very_dissatisfied_outlined, size: 100, color: Colors.green);
     } else if (bmi >= 18.5) {
-      icon =
-          const Icon(Icons.sentiment_satisfied, size: 100, color: Colors.green);
+      icon = const Icon(Icons.sentiment_satisfied, size: 100, color: Colors.green);
     }
     return icon;
   }
@@ -44,7 +41,7 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double bmi = weight / ((height / 100) * (height / 100));
-    String result = "정상";
+    // String result = "정상";
 
     return Scaffold(
         appBar: AppBar(
